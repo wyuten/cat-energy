@@ -1,0 +1,42 @@
+/* Nutrition program`s */
+
+.programs-list {
+    padding-top: 20px;
+}
+
+.programs-list .nutrition-program:not(:last-of-type) {
+    margin-bottom: 20px;
+}
+
+
+@media (min-width: $tabletView) {
+    /* Nutrition program`s */
+
+    .programs-list {
+        padding-top: 30px;
+    }
+
+    .programs-list .nutrition-program:not(:last-of-type) {
+        margin-bottom: 30px;
+    }
+}
+
+
+@media (min-width: $desktopView) {
+    /* Nutrition program`s */
+    
+    .nutrition-programs {
+        margin-top: 0;
+    }
+
+    .programs-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-top: 80px;
+    }
+
+    .programs-list .nutrition-program:not(:last-of-type) {
+        margin-bottom: 0;
+    }
+}

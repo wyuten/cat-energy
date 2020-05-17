@@ -1,0 +1,182 @@
+/* Footer */
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #f2f2f2;
+}
+
+.footer-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #d9d9d9;
+    box-sizing: content-box;
+
+    &:last-child {
+        border-bottom: none;
+    }
+}
+
+
+/* Logo footer */
+
+.logo-footer {
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    a {
+        display: flex;
+    }
+}
+
+.logo-footer__img {
+    width: 128px;
+    height: 24px;
+}
+
+
+/* Socials footer */
+
+.socials-footer {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.socials-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 19px;
+    margin-right: 5px;
+    padding: 15px;
+    box-sizing: content-box;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.socials-link__img {
+    fill: #666666;
+}
+
+.socials-link__img--vk {
+    width: 22px;
+    height: 12px;
+}
+
+.socials-link__img--instagram {
+    width: 16px;
+    height: 16px;
+}
+
+.socials-link__img--facebook {
+    width: 10px;
+    height: 19px;
+}
+
+
+/* Copyright footer */
+
+.copyright-footer {
+    justify-content: space-between;
+    padding-top: 22px;
+    padding-bottom: 22px;
+}
+
+a.copyright-logo {
+    font-family: Arial, sans-serif;
+    text-decoration: none;
+    color: #444444;
+}
+
+.copyright-emblem svg {
+    width: 27px;
+    height: 34px;
+    fill: #666666;
+}
+
+
+@media (min-width: $tabletView) {
+    /* Footer */
+
+    .footer {
+        flex-direction: row;
+        justify-content: space-between;
+        padding-top: 55px;
+        padding-bottom: 55px;
+    }
+
+    .footer-item {
+        padding: 0;
+        border-bottom: none;
+    }
+
+    .logo-footer a {
+        &:hover {
+            opacity: 0.8;
+        }
+
+        &:active {
+            opacity: 0.6;
+        }
+    }
+
+
+    /* Socials footer */
+
+    .socials-link {
+        width: 30px;
+        height: 28px;
+        padding: 10px;
+        margin-right: 7px;
+
+        &:hover .socials-link__img {
+            fill: #68b738;
+        }
+
+        &:active .socials-link__img {
+            opacity: 0.3;
+        }
+    }
+
+    .socials-link__img {
+        &--vk {
+            width: 30px;
+            height: 16px;
+        }
+
+        &--instagram {
+            width: 23px;
+            height: 23px;
+        }
+
+        &--facebook {
+            width: 14px;
+            height: 28px;
+        }
+    }
+
+
+    /* Copyright footer */
+
+    .copyright-emblem {
+        &:hover svg {
+            fill: #68b738;
+        }
+
+        &:active svg {
+            opacity: 0.3;
+        }
+    }
+    
+    .copyright-logo {
+        margin-right: 22px;
+
+        &:active {
+            opacity: 0.3;
+        }
+    }
+}

@@ -1,0 +1,31 @@
+/* Flow block */
+// Flow block - repeating portion of content blocks on the page
+
+.flow__block {
+    margin-bottom: 40px;
+}
+
+@media (min-width: $tabletView) {
+    .flow__block {
+        margin-bottom: 50px;
+    }
+}
+
+@media (min-width: $desktopView) {
+    .flow__block {
+        margin-bottom: 80px;
+    }
+}
+
+.flow__block-title {
+    margin-bottom: 35px;
+    font-size: 36px;
+    font-weight: normal;
+}
+
+@media (min-width: $tabletView) {
+    .flow__block-title {
+        margin-bottom: 65px;
+        font-size: 60px;
+    }
+}

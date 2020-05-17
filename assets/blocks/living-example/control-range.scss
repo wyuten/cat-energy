@@ -1,0 +1,131 @@
+/* Main */
+
+.cat-example__control-range {
+    width: 100%; // Firefox
+    background: transparent; // Otherwise #ffffff in Chrome
+    -webkit-appearance: none; // Hides the slider so that custom slider can be made
+}
+
+.cat-example__control-range:focus {
+    outline: none;
+}
+
+.cat-example__control-range::-ms-track {
+    width: 100%;
+
+    /* Hides the slider so that custom slider can be made */
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+
+    cursor: pointer;
+}
+
+
+/* Track */
+
+.cat-example__control-range::-webkit-slider-runnable-track {
+    height: 6px;
+    background: #dcdcdc;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.cat-example__control-range::-moz-range-track {
+    height: 6px;
+    background: #dcdcdc;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.cat-example__control-range::-ms-track {
+    height: 6px;
+    background: #dcdcdc;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+
+/* Thumb */
+
+.cat-example__control-range::-webkit-slider-thumb {
+    height: 34px;
+    width: 34px;
+    margin-top: -14px;
+
+    box-shadow: 0px 2px 5px 0px #cdcdcd;
+    border: 1px solid #cdcdcd;
+    border-radius: 50%;
+
+    background-color: #ffffff;
+    background-image: url("../images/slider-control.svg");
+    background-size: 8px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    cursor: pointer;
+    -webkit-appearance: none;
+
+    &:hover {
+        box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    &:active {
+        border: 2px solid #68b738;
+        box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.3);
+    }
+}
+
+.cat-example__control-range::-moz-range-thumb {
+    height: 34px;
+    width: 34px;
+
+    box-shadow: 0px 2px 5px 0px #cdcdcd;
+    border: 1px solid #cdcdcd;
+    border-radius: 50%;
+
+    background-color: #ffffff;
+    background-image: url("../images/slider-control.svg");
+    background-size: 8px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    cursor: pointer;
+    -webkit-appearance: none;
+
+    &:hover {
+        box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    &:active {
+        border: 2px solid #68b738;
+        box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.3);
+    }
+}
+
+.cat-example__control-range::-ms-thumb {
+    height: 34px;
+    width: 34px;
+
+    box-shadow: 0px 2px 5px 0px #cdcdcd;
+    border: 1px solid #cdcdcd;
+    border-radius: 50%;
+
+    background-color: #ffffff;
+    background-image: url("../images/slider-control.svg");
+    background-size: 8px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    cursor: pointer;
+    -webkit-appearance: none;
+
+    &:hover {
+        box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    &:active {
+        border: 2px solid #68b738;
+        box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.3);
+    }
+}

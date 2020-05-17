@@ -1,0 +1,134 @@
+/* Header promo */
+
+.header__promo {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 480px;
+}
+
+.text-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 350px;
+    padding-top: 25px;
+
+    color: #ffffff;
+    background-image: url("../images/header-background--mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+
+.promo__can {
+    position: absolute;
+    align-self: center;
+    top: 170px;
+}
+
+.promo__title {
+    margin-bottom: 18px;
+    font-size: 36px;
+    font-weight: normal;
+    text-align: center;
+}
+
+.promo__subtitle {
+    font-size: 14px;
+    font-weight: normal;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.promo__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45px;
+    margin-top: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+
+    color: #ffffff;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    background-color: #68b738;
+}
+
+
+@media (min-width: $tabletView) {
+    /* Header promo */
+
+    .header__promo {
+        height: 850px;
+        padding-top: 35px;
+        margin-left: $tabletIndent + 90px;
+    }
+
+    .text-wrapper {
+        align-items: start;
+        height: auto;
+        padding-top: 0;
+        color: #111111;
+        background-image: none;
+    }
+
+    .promo__can {
+        z-index: -1;
+        top: auto;
+        bottom: 0;
+        margin-left: -55px;
+    }
+
+    .promo__title {
+        margin-bottom: 35px;
+        font-size: 60px;
+        line-height: 60px;
+        text-align: start;
+    }
+
+    .promo__subtitle {
+        margin-bottom: 50px;
+        font-size: 20px;
+    }
+
+    .promo__link {
+        display: inline-block;
+        align-self: flex-start;
+        height: auto;
+        padding: 17px 30px;
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+
+        font-size: 20px;
+
+        &:hover {
+            background-color: #5eaa2f;
+        }
+
+        &:active {
+            color: rgba(255, 255, 255, 0.3);
+        }
+    }
+}
+
+
+@media (min-width: $desktopView) {
+    /* Header promo */
+    
+    .header__promo {
+        height: auto;
+        padding-top: 50px;
+        margin-left: calc(50% - #{$desktopView} / 2 + 85px);
+    }
+
+    .promo__can {
+        top: 0;
+        left: 420px;
+        z-index: 0;
+        margin-top: -30px;
+
+    }
+}

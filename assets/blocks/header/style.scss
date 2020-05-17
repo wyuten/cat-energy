@@ -1,0 +1,15 @@
+@import '../../blocks/header/__nav/style.scss';
+@import '../../blocks/header/__promo/style.scss';
+
+@media (min-width: $desktopView) {
+    /* Header */
+    
+    .header { 
+        height: 700px;
+                      
+        background-image: url('../images/header-background--desktop.jpg');
+        background-repeat: no-repeat;
+        background-position: 100% 0;
+        background-size: 50vw auto;
+    }
+}

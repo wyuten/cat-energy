@@ -1,0 +1,89 @@
+/* Location */
+
+$mapHeight: 360px;
+
+.address {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #ffffff;
+}
+
+.address__title {
+    font-size: 16px;
+    font-weight: normal;
+    text-transform: uppercase;
+    line-height: 20px;
+}
+
+.address__subtitle {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    color: #444444;
+}
+
+.map {
+    width: 100%;
+    height: $mapHeight;
+}
+
+@media (min-width: $tabletView) {
+    /* Location */
+
+    $mapHeight: 400px;
+
+    .address {
+        padding: 70px;
+        word-wrap: pre-wrap;
+    }
+
+    .address__title {
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    .address__subtitle {
+        font-size: 16px;
+        text-align: right;
+    }
+
+    .address__city {
+        &::before {
+            content: "";
+            display: inline-block;
+            width: 100%;
+        }
+    }
+
+    .map {
+        height: $mapHeight;
+    }
+}
+
+@media (min-width: $desktopView) {
+    /* Location */
+    
+    $mapHeight: 400px;
+
+    .location {
+        position: relative;
+        display: flex;
+    }
+
+    .address {
+        position: absolute;
+        top: ($mapHeight - 200px) / 2;
+        left: $desktopIndent;
+        justify-content: flex-start;
+        width: 570px;
+        height: 200px;
+    }
+
+    .address__subtitle {
+        margin-left: 95px;
+        text-align: left;
+    }
+}

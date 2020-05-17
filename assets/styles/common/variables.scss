@@ -1,0 +1,7 @@
+$mobileView: 320px;
+$tabletView: 768px;
+$desktopView: 1220px;
+
+$mobileIndent: 20px;
+$tabletIndent: 30px;
+$desktopIndent: calc(50% - #{$desktopView} / 2);

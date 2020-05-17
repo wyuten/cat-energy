@@ -1,0 +1,61 @@
+@font-face {
+    font-family: 'Oswald';
+    font-display: swap;
+    src:
+        url("../fonts/Oswald-Regular.woff2") format("woff2"),
+        url("../fonts/Oswald-Regular.woff") format("woff"),
+        url("../fonts/Oswald-Medium.woff2") format("woff2"),
+        url("../fonts/Oswald-Medium.woff") format("woff");
+}
+
+* {
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+ul, h1, h2, h3, p, button {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-width: 320px;
+    font-family: 'Oswald', 'Arial', sans-serif;
+    font-size: 16px;
+    color: #111111;
+}
+
+.visually-hidden {
+    // To hide content
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px);
+    /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0 !important;
+    border: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+}
+
+.container {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+@media (min-width: $tabletView) {
+    .container {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+@media (min-width: $desktopView) {
+    .container {
+        padding-left: calc(50% - #{$desktopView} / 2);
+        padding-right: calc(50% - #{$desktopView} / 2);
+    }
+}

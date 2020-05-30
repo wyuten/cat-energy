@@ -1,0 +1,13 @@
+/* Header */
+
+@media (min-width: $tabletView) {
+    .site-nav__item {
+        a {
+            color: #111111;
+        }
+
+        &--current a {
+            border-bottom-color: #68b738;
+        }
+    }
+}

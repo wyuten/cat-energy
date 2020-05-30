@@ -1,0 +1,12 @@
+/* First screen */
+
+@media (min-width: $desktopView) {
+    .first-screen {
+        height: 700px;
+
+        background-image: url('../images/header-background--desktop.jpg');
+        background-repeat: no-repeat;
+        background-position: 100% 0;
+        background-size: 50vw auto;
+    }
+}

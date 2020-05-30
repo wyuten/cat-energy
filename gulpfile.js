@@ -54,12 +54,14 @@ gulp.task('styles-prod', () => {
 		]))
 		.pipe(cssMinify())
 		.pipe(rename({suffix: ".min"}))
+		.pipe(flatten({includeParents: 0}))
 		.pipe(gulp.dest('build/assets/styles'));
 });
 
 gulp.task('styles-dev', () => {
 	return gulp.src('assets/styles/pages/*.scss')
 		.pipe(sass())
+		.pipe(flatten({includeParents: 0}))
 		.pipe(gulp.dest('build/assets/styles'));
 });
 

@@ -1,6 +1,6 @@
-/* Header promo */
+/* Promo */
 
-.header__promo {
+.promo {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -54,13 +54,21 @@
     text-decoration: none;
 
     background-color: #68b738;
+
+    &:hover {
+        background-color: #5eaa2f;
+    }
+
+    &:active {
+        color: rgba(255, 255, 255, 0.3);
+    }
 }
 
 
 @media (min-width: $tabletView) {
-    /* Header promo */
+    /* Promo */
 
-    .header__promo {
+    .promo {
         height: 850px;
         padding-top: 35px;
         margin-left: $tabletIndent + 90px;
@@ -103,22 +111,14 @@
         margin-right: 0;
 
         font-size: 20px;
-
-        &:hover {
-            background-color: #5eaa2f;
-        }
-
-        &:active {
-            color: rgba(255, 255, 255, 0.3);
-        }
     }
 }
 
 
 @media (min-width: $desktopView) {
-    /* Header promo */
+    /* Promo */
     
-    .header__promo {
+    .promo {
         height: auto;
         padding-top: 50px;
         margin-left: calc(50% - #{$desktopView} / 2 + 85px);

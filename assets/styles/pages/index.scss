@@ -1,10 +1,12 @@
 /* Main */
 @import '../common/variables.scss';
 @import '../common/main.scss';
-@import '../common/flow.scss';
 
 /* Blocks */
+@import 'index/flow.scss'; // part of the page, not the block
+@import '../../blocks/first-screen/style.scss';
 @import '../../blocks/header/style.scss';
+@import '../../blocks/promo/style.scss';
 @import '../../blocks/nutrition-programs/style.scss';
 @import '../../blocks/nutrition-program/style.scss';
 @import '../../blocks/advantages/style.scss';

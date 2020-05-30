@@ -1,15 +1,239 @@
-@import '../../blocks/header/__nav/style.scss';
-@import '../../blocks/header/__promo/style.scss';
+/* Top wrapper */
+
+@media (max-width: $tabletView - 1) {
+    /* For mobile accessibility */
+
+    .top-wrapper.container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .company-emblem {
+        margin-left: $mobileIndent;
+    }
+
+    .nav-toggle {
+        padding: $mobileIndent;
+    }
+}
+
+.top-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 65px;
+
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.company-emblem,
+.company-logo {
+    font-size: 0;
+
+    &:hover {
+        opacity: 0.8;
+    }
+
+    &:active {
+        opacity: 0.6;
+    }
+}
+
+.company-emblem {
+    display: block;
+    width: 33px;
+    height: 38px;
+    background-image: url('../images/emblem--mobile.svg');
+    background-size: cover;
+}
+
+.company-logo {
+    width: 101px;
+    height: 18px;
+    background-image: url('../images/logo--mobile.svg');
+    background-size: cover;
+}
+
+.nav-toggle {
+    background: none;
+    border: none;
+
+    &--desc {
+        display: none;
+    }
+
+    &::before {
+        content: "";
+        display: block;
+        width: 18px;
+        height: 18px;
+        background-image: url("../images/toggle--open.svg");
+        background-size: cover;
+    }
+
+    &.opened::before {
+        background-image: url("../images/toggle--close.svg");
+    }
+
+    .no-js &::before {
+        background-image: none;
+    }
+}
+
+
+/* Site navigation */
+
+.site-nav {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    &:not(.opened) {
+        display: none;
+    }
+}
+
+.site-nav__item a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 65px;
+
+    text-align: center;
+    color: #111111;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    border-bottom: 1px solid #e6e6e6;
+}
+
+
+@media (min-width: $tabletView) {
+    /* Header */
+
+    .header {
+        display: flex;
+        align-items: center;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+
+
+    /* Top wrapper */
+
+    .top-wrapper {
+        height: auto;
+        padding-right: 0;
+        border: none;
+    }
+
+    .company-emblem {
+        display: none;
+    }
+
+    .company-logo {
+        width: 173px;
+        height: 58px;
+        background-image: url("../images/logo--tablet.svg");
+        background-size: contain;
+    }
+
+    .nav-toggle {
+        display: none;
+    }
+
+
+    /* Site navigation */
+
+    .site-nav {
+        flex-direction: row;
+        justify-content: flex-end;
+        width: 100%;
+        padding-right: $tabletIndent;
+
+        &:not(.opened) {
+            display: inherit;
+        }
+    }
+
+    .site-nav__item {
+        margin-right: 35px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    .site-nav__item {
+        a {
+            height: auto;
+
+            color: #111111;
+            font-size: 18px;
+            font-weight: normal;
+            line-height: calc(1em + 20px);
+
+            border-bottom: none;
+
+            &:hover {
+                opacity: 0.6;
+            }
+
+            &:active {
+                opacity: 0.3;
+            }
+        }
+
+        &--current a {
+            border-bottom: 2px solid #68b738;
+        }
+    }
+}
+
 
 @media (min-width: $desktopView) {
     /* Header */
-    
-    .header { 
-        height: 700px;
-                      
-        background-image: url('../images/header-background--desktop.jpg');
-        background-repeat: no-repeat;
-        background-position: 100% 0;
-        background-size: 50vw auto;
+
+    .header {
+        padding-top: 55px;
+        padding-bottom: 55px;
+    }
+
+
+    /* Top wrapper */
+
+    .company-logo {
+        width: 202px;
+        height: 59px;
+        background-image: url("../images/logo--desktop.svg");
+        background-size: cover;
+    }
+
+
+    /* Site navigation */
+
+    .site-nav {
+        padding-right: $desktopIndent;
+    }
+
+    .site-nav__item {
+        a {
+            color: #ffffff;
+            font-size: 20px;
+
+            &:hover {
+                opacity: 0.6;
+            }
+
+            &:active {
+                opacity: 0.3;
+            }
+        }
+
+        &--current a {
+            border-bottom-color: #ffffff;
+        }
     }
 }

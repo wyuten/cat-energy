@@ -57,6 +57,7 @@
     }
 
     .advantages__item {
+        position: relative;
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
@@ -71,21 +72,37 @@
         background-position: right;
         background-size: contain;
 
-        &--eco {
-            background-image: url("../images/1.png");
-            background-position: calc(100% - 40px);
+        &:after {
+            content: "2";
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: -1;
+            display: block;
+            height: 100%;
+            // width: 125px;
+
+            font-family: "Oswald",
+            sans-serif;
+            font-size: 281px;
+            color: #f2f2f2;
+            line-height: 0.74em;
         }
 
-        &--easy {
-            background-image: url("../images/2.png");
+        &--eco:after {
+            content: "1";
         }
 
-        &--functional {
-            background-image: url("../images/3.png");
+        &--easy:after {
+            content: "2";
         }
 
-        &--quickly {
-            background-image: url("../images/4.png");
+        &--functional:after {
+            content: "3";
+        }
+
+        &--quickly:after {
+            content: "4";
         }
 
         &:nth-child(1),
@@ -119,8 +136,8 @@
     /* Advantages */
     
     .advantages {
+        padding-bottom: 80px;
         border-bottom: none;
-        padding-bottom: 0;
     }
 
     .advantages__list {

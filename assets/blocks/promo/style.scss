@@ -40,28 +40,9 @@
 }
 
 .promo__link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 45px;
     margin-top: auto;
-    margin-left: 20px;
-    margin-right: 20px;
-
-    color: #ffffff;
-    font-size: 14px;
-    text-transform: uppercase;
-    text-decoration: none;
-
-    background-color: #68b738;
-
-    &:hover {
-        background-color: #5eaa2f;
-    }
-
-    &:active {
-        color: rgba(255, 255, 255, 0.3);
-    }
+    margin-left: $mobileIndent;
+    margin-right: $mobileIndent;
 }
 
 
@@ -104,13 +85,11 @@
     .promo__link {
         display: inline-block;
         align-self: flex-start;
-        height: auto;
-        padding: 17px 30px;
         margin-top: 0;
         margin-left: 0;
         margin-right: 0;
-
-        font-size: 20px;
+        padding-left: 25px;
+        padding-right: 25px;
     }
 }
 

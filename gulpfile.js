@@ -81,7 +81,7 @@ gulp.task('images-dev', () => {
 		.pipe(gulp.dest('build/assets/images/'));
 });
 
-gulp.task('svg', () => {
+gulp.task('sprite', () => {
 	return gulp.src('assets/blocks/**/images/*.svg')
 	.pipe(svgStore({
 		inline: true
@@ -144,7 +144,7 @@ gulp.task('dev-build', (done) => {
 		'immutable-styles-dev',
 		'styles-dev', 
 		'images-dev', 
-		'svg', 
+		'sprite', 
 		'completed-scripts', 
 		'scripts-dev', 
 		'fonts'
@@ -173,7 +173,7 @@ gulp.task('dev-serve', () => {
 		.on('all', gulp.series('images-dev', 'reload'));
 		
 	gulp.watch('assets/**/images/*.svg')
-		.on('all', gulp.series('svg', 'reload'));
+		.on('all', gulp.series('sprite', 'reload'));
 });
 
 gulp.task('prod-build', (done) => {
@@ -182,7 +182,7 @@ gulp.task('prod-build', (done) => {
 		'immutable-styles-prod',
 		'styles-prod', 
 		'images-prod',
-		'svg', 
+		'sprite', 
 		'completed-scripts', 
 		'scripts-prod',  
 		'fonts',
@@ -211,5 +211,5 @@ gulp.task('prod-serve', () => {
 		.on('all', gulp.series('images-prod', 'reload'));
 		
 	gulp.watch('assets/**/images/*.svg')
-		.on('all', gulp.series('svg', 'reload'));
+		.on('all', gulp.series('sprite', 'reload'));
 });

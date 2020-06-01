@@ -1,0 +1,10 @@
+.address {
+    background-color: #f2f2f2;
+}
+
+
+@media (min-width: $desktopView) {
+    .address {
+        background-color: #ffffff;
+    }
+}

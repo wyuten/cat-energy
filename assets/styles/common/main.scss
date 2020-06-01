@@ -55,7 +55,47 @@ body {
 
 @media (min-width: $desktopView) {
     .container {
-        padding-left: calc(50% - #{$desktopView} / 2);
-        padding-right: calc(50% - #{$desktopView} / 2);
+        padding-left: $desktopIndent;
+        padding-right: $desktopIndent;
+    }
+}
+
+.btn {
+    padding-top: 12px;
+    padding-bottom: 12px;
+
+    font-size: 16px;
+    font-family: inherit;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+      
+    border: none;
+    cursor: pointer;
+
+    &--green {
+        color: #ffffff;
+        background-color: #68b738;
+
+        &:hover {
+            background-color: #5eaa2f;
+        }
+
+        &:active {
+            color: rgba(255, 255, 255, 0.3);
+        }
+    }
+
+    &--grey {
+        color: #444444;
+        background-color: #f2f2f2;
+
+        &:hover {
+            background-color: #ebebeb;
+        }
+
+        &:active {
+            color: rgba(68, 68, 68, 0.3);
+        }
     }
 }

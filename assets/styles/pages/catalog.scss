@@ -7,6 +7,10 @@
 @import '../../blocks/header/style.scss';
 @import '../../blocks/catalog/style.scss';
 @import '../../blocks/product/style.scss';
+@import '../../blocks/additionals/style.scss';
+@import '../../blocks/location/style.scss';
+@import '../../blocks/footer/style.scss';
 
 /* Redefinitions */
 @import 'catalog/header.scss';
+@import 'catalog/location.scss';

@@ -1,8 +1,19 @@
 /* First screen */
 
+.first-screen {
+    margin-bottom: 20px;
+}
+
+@media (min-width: $tabletView) {
+    .first-screen {
+        margin-bottom: 30px;
+    }
+}
+
 @media (min-width: $desktopView) {
     .first-screen {
         height: 700px;
+        margin-bottom: 80px;
 
         background-image: url('../images/header-background--desktop.jpg');
         background-repeat: no-repeat;

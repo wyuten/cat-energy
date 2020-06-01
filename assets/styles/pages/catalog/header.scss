@@ -1,6 +1,10 @@
 /* Header */
 
 @media (min-width: $tabletView) {
+    .header {
+        margin-bottom: 30px;
+    }
+
     .site-nav__item {
         a {
             color: #111111;
@@ -9,5 +13,12 @@
         &--current a {
             border-bottom-color: #68b738;
         }
+    }
+}
+
+
+@media (min-width: $desktopView) {
+    .header {
+        margin-bottom: 20px;
     }
 }

@@ -1,5 +1,10 @@
 /* Advantages */
 
+.advantages {
+    padding-left: $mobileIndent;
+    padding-right: $mobileIndent;
+}
+
 .advantages__item {
     display: flex;
     align-items: center;
@@ -47,6 +52,8 @@
     /* Advantages */
 
     .advantages {
+        padding-left: $tabletIndent;
+        padding-right: $tabletIndent;
         border-bottom: 1px solid #e6e6e6;
     }
 
@@ -134,6 +141,8 @@
     /* Advantages */
     
     .advantages {
+        padding-left: $desktopIndent;
+        padding-right: $desktopIndent;
         border-bottom: none;
     }
 

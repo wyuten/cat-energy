@@ -114,7 +114,7 @@ gulp.task('scripts-dev', () => {
 		'!assets/blocks/**/*.min.js',
 		'assets/scripts/**/*.js',
 		'!assets/scripts/**/*.min.js',
-	])
+		])
 		.pipe(gulp.dest('build/assets/scripts'));
 });
 
@@ -161,13 +161,13 @@ gulp.task('dev-serve', () => {
 	});
 
 	gulp.watch('*.html')
-		.on('change', gulp.series('documents', 'reload'));
+		.on('all', gulp.series('documents', 'reload'));
 	
 	gulp.watch('assets/**/*.scss')
-		.on('change', gulp.series('styles-dev', 'reload'));
+		.on('all', gulp.series('styles-dev', 'reload'));
 		
 	gulp.watch('assets/**/*.js')
-		.on('change', gulp.series('completed-scripts', 'scripts-dev', 'reload'));
+		.on('all', gulp.series('completed-scripts', 'scripts-dev', 'reload'));
 
 	gulp.watch('assets/**/images/*.*')
 		.on('all', gulp.series('images-dev', 'reload'));
@@ -199,13 +199,13 @@ gulp.task('prod-serve', () => {
 	});
 
 	gulp.watch('*.html')
-		.on('change', gulp.series('documents', 'reload'));
+		.on('all', gulp.series('documents', 'reload'));
 	
 	gulp.watch('assets/**/*.scss')
-		.on('change', gulp.series('styles-prod', 'reload'));
+		.on('all', gulp.series('styles-prod', 'reload'));
 		
 	gulp.watch('assets/**/*.js')
-		.on('change', gulp.series('completed-scripts', 'scripts-prod', 'reload'));
+		.on('all', gulp.series('completed-scripts', 'scripts-prod', 'reload'));
 
 	gulp.watch('assets/**/images/*.*')
 		.on('all', gulp.series('images-prod', 'reload'));

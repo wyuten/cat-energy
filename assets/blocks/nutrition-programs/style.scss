@@ -1,5 +1,9 @@
 /* Nutrition program`s */
 
+.nutrition-programs {
+    padding-left: $mobileIndent;
+    padding-right: $mobileIndent;
+}
 
 .programs-list .nutrition-program:not(:last-of-type) {
     margin-bottom: 20px;
@@ -9,6 +13,11 @@
 @media (min-width: $tabletView) {
     /* Nutrition program`s */
 
+    .nutrition-programs {
+        padding-left: $tabletIndent;
+        padding-right: $tabletIndent;
+    }
+
     .programs-list .nutrition-program:not(:last-of-type) {
         margin-bottom: 30px;
     }
@@ -17,6 +26,11 @@
 
 @media (min-width: $desktopView) {
     /* Nutrition program`s */
+
+    .nutrition-programs {
+        padding-left: $desktopIndent;
+        padding-right: $desktopIndent;
+    }
 
     .programs-list {
         display: flex;

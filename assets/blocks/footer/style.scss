@@ -1,12 +1,19 @@
 /* Footer */
 
-.footer {
+
+@import '../../blocks/location/style.scss';
+
+.footer-nav {
     display: flex;
     flex-direction: column;
+    padding-left: $mobileIndent;
+    padding-right: $mobileIndent;
     background-color: #f2f2f2;
 }
 
-.footer-item {
+.footer-logo,
+.socials,
+.copyright {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,9 +26,9 @@
 }
 
 
-/* Logo footer */
+/* Footer logo */
 
-.logo-footer {
+.footer-logo {
     padding-top: 40px;
     padding-bottom: 40px;
 
@@ -30,15 +37,15 @@
     }
 }
 
-.logo-footer__img {
+.footer-logo__img {
     width: 128px;
     height: 24px;
 }
 
 
-/* Socials footer */
+/* Socials */
 
-.socials-footer {
+.socials {
     padding-top: 10px;
     padding-bottom: 10px;
 }
@@ -78,9 +85,9 @@
 }
 
 
-/* Copyright footer */
+/* Copyright */
 
-.copyright-footer {
+.copyright {
     justify-content: space-between;
     padding-top: 22px;
     padding-bottom: 22px;
@@ -102,19 +109,20 @@ a.copyright-logo {
 @media (min-width: $tabletView) {
     /* Footer */
 
-    .footer {
+    .footer-nav {
         flex-direction: row;
         justify-content: space-between;
-        padding-top: 55px;
-        padding-bottom: 55px;
+        padding: 55px $tabletIndent;
     }
 
-    .footer-item {
+    .footer-logo,
+    .socials,
+    .copyright {
         padding: 0;
         border-bottom: none;
     }
 
-    .logo-footer a {
+    .footer-logo a {
         &:hover {
             opacity: 0.8;
         }
@@ -125,7 +133,7 @@ a.copyright-logo {
     }
 
 
-    /* Socials footer */
+    /* Socials */
 
     .socials-link {
         width: 30px;
@@ -160,7 +168,7 @@ a.copyright-logo {
     }
 
 
-    /* Copyright footer */
+    /* Copyright */
 
     .copyright-emblem {
         &:hover svg {
@@ -178,5 +186,13 @@ a.copyright-logo {
         &:active {
             opacity: 0.3;
         }
+    }
+}
+
+
+@media (min-width: $desktopView) {
+    .footer-nav {
+        padding-left: $desktopIndent;
+        padding-right: $desktopIndent;
     }
 }

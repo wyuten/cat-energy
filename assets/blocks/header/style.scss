@@ -1,27 +1,13 @@
+/* Header */
+
 /* Top wrapper */
-
-@media (max-width: $tabletView - 1) {
-    /* For mobile accessibility */
-
-    .top-wrapper.container {
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    .company-emblem {
-        margin-left: $mobileIndent;
-    }
-
-    .nav-toggle {
-        padding: $mobileIndent;
-    }
-}
 
 .top-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 65px;
+    padding-left: $mobileIndent;
 
     border-bottom: 1px solid #e6e6e6;
 }
@@ -55,6 +41,7 @@
 }
 
 .nav-toggle {
+    padding: $mobileIndent;
     background: none;
     border: none;
 
@@ -116,8 +103,8 @@
     .header {
         display: flex;
         align-items: center;
-        padding-top: 25px;
-        padding-bottom: 25px;
+        margin-bottom: 30px;
+        padding: 25px $tabletIndent;
     }
 
 
@@ -125,7 +112,7 @@
 
     .top-wrapper {
         height: auto;
-        padding-right: 0;
+        padding-left: 0;
         border: none;
     }
 
@@ -151,7 +138,6 @@
         flex-direction: row;
         justify-content: flex-end;
         width: 100%;
-        padding-right: $tabletIndent;
 
         &:not(.opened) {
             display: inherit;
@@ -197,8 +183,8 @@
     /* Header */
 
     .header {
-        padding-top: 55px;
-        padding-bottom: 55px;
+        margin-bottom: 20px;
+        padding: 55px $desktopIndent;
     }
 
 
@@ -214,13 +200,8 @@
 
     /* Site navigation */
 
-    .site-nav {
-        padding-right: $desktopIndent;
-    }
-
     .site-nav__item {
         a {
-            color: #ffffff;
             font-size: 20px;
 
             &:hover {
@@ -233,7 +214,7 @@
         }
 
         &--current a {
-            border-bottom-color: #ffffff;
+            border-bottom-color: #68b738;
         }
     }
 }

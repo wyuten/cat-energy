@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
@@ -15,27 +15,23 @@
 </head>
 
 <body class="no-js">
-    <div class="first-screen">
-        <header class="header">
-            <div class="top-wrapper container">
-                <a class="company-emblem" href="index.html"></a>
-                <a class="company-logo" href="index.html"></a>
-                <button 
-                    class="nav-toggle opened"
-                    aria-label="Открыть меню">
-                    <span class="nav-toggle--desc">Открыть меню</span></button>
-            </div>
-            <ul class="site-nav opened">
-                <li class="site-nav__item"><a href="index.html">Главная</a></li>
-                <li class="site-nav__item site-nav__item--current"><a>Каталог продукции</a></li>
-                <li class="site-nav__item"><a href="index.html#nutrition-programs">Подбор программы</a></li>
-            </ul>
-        </header>
-    </div>
+    <header class="header">
+        <div class="top-wrapper">
+            <a class="company-emblem" href="index.html"></a>
+            <a class="company-logo" href="index.html"></a>
+            <button class="nav-toggle opened" aria-label="Открыть меню">
+                <span class="nav-toggle--desc">Открыть меню</span></button>
+        </div>
+        <ul class="site-nav opened">
+            <li class="site-nav__item"><a href="index.html">Главная</a></li>
+            <li class="site-nav__item site-nav__item--current"><a>Каталог продукции</a></li>
+            <li class="site-nav__item"><a href="program-selection.html">Подбор программы</a></li>
+        </ul>
+    </header>
 
     <main>
         <section class="catalog flow-block">
-            <h1 class="catalog__title container">Каталог продукции</h1>
+            <h1 class="page-title page-title--single">Каталог продукции</h1>
             <ul class="products-list">
                 <li class="product products-list__item">
                     <div class="product__info">
@@ -227,8 +223,8 @@
             </ul>
         </section>
         <section class="additionals">
-            <div class="flow__title-wrapper">
-                <h2 class="additionals__title flow-block__title">Дополнительные товары</h2>
+            <div class="flow-title">
+                <h2>Дополнительные товары</h2>
             </div>
             <div class="additionals__content">
                 <ul class="additionals-list">
@@ -280,8 +276,11 @@
                 </div>
             </div>
         </section>
+    </main>
+
+    <footer>
         <section class="location">
-            <div class="address container">
+            <div class="address">
                 <h2 class="address__title">Приглашаем<br>к сотрудничеству<br>дилеров!</h2>
                 <p class="address__subtitle">
                     ул. Большая<br>
@@ -294,46 +293,45 @@
                 frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" width="" height=""
                 tabindex="0"></iframe>
         </section>
-    </main>
-
-    <footer class="footer container">
-        <div class="footer-item logo-footer">
-            <a>
-                <svg class="logo-footer__img" aria-labelledby="heading">
-                    <title class="">Cat energy</title>
-                    <use xlink:href="assets/svg/sprite.svg#footer-logo" />
-                </svg>
-            </a>
-        </div>
-        <div class="footer-item socials-footer">
-            <a class="socials-link" href="https://vk.com">
-                <svg class="socials-link__img socials-link__img--vk" aria-labelledby="heading">
-                    <title>ВК</title>
-                    <use xlink:href="assets/svg/sprite.svg#vk" />
-                </svg>
-            </a>
-            <a class="socials-link" href="https://instagram.com">
-                <svg class="socials-link__img socials-link__img--instagram" aria-labelledby="heading">
-                    <title>Инстаграм</title>
-                    <use xlink:href="assets/svg/sprite.svg#instagram"></use>
-                </svg>
-            </a>
-            <a class="socials-link" href="https://facebook.com">
-                <svg class="socials-link__img socials-link__img--facebook" aria-labelledby="heading">
-                    <title>Фэйсбук</title>
-                    <use xlink:href="assets/svg/sprite.svg#facebook"></use>
-                </svg>
-            </a>
-        </div>
-        <div class="footer-item copyright-footer">
-            <a class="copyright-logo" href="https://htmlacademy.ru">HTML Academy</a>
-            <a class="copyright-emblem" href="https://htmlacademy.ru">
-                <svg aria-labelledby="heading">
-                    <title>HTML Academy</title>
-                    <use xlink:href="assets/svg/sprite.svg#copyright-emblem"></use>
-                </svg>
-            </a>
-        </div>
+        <section class="footer-nav">
+            <div class="footer-logo">
+                <a href="index.html">
+                    <svg class="footer-logo__img" aria-labelledby="heading">
+                        <title class="">Cat energy</title>
+                        <use xlink:href="assets/svg/sprite.svg#footer-logo" />
+                    </svg>
+                </a>
+            </div>
+            <div class="socials">
+                <a class="socials-link" href="https://vk.com">
+                    <svg class="socials-link__img socials-link__img--vk" aria-labelledby="heading">
+                        <title>ВК</title>
+                        <use xlink:href="assets/svg/sprite.svg#vk" />
+                    </svg>
+                </a>
+                <a class="socials-link" href="https://instagram.com">
+                    <svg class="socials-link__img socials-link__img--instagram" aria-labelledby="heading">
+                        <title>Инстаграм</title>
+                        <use xlink:href="assets/svg/sprite.svg#instagram"></use>
+                    </svg>
+                </a>
+                <a class="socials-link" href="https://facebook.com">
+                    <svg class="socials-link__img socials-link__img--facebook" aria-labelledby="heading">
+                        <title>Фэйсбук</title>
+                        <use xlink:href="assets/svg/sprite.svg#facebook"></use>
+                    </svg>
+                </a>
+            </div>
+            <div class="copyright">
+                <a class="copyright-logo" href="https://htmlacademy.ru">HTML Academy</a>
+                <a class="copyright-emblem" href="https://htmlacademy.ru">
+                    <svg aria-labelledby="heading">
+                        <title>HTML Academy</title>
+                        <use xlink:href="assets/svg/sprite.svg#copyright-emblem"></use>
+                    </svg>
+                </a>
+            </div>
+        </section>
     </footer>
     
     <script src="assets/scripts/lazysizes.min.js"></script>

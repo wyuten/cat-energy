@@ -17,14 +17,14 @@
     }
 }
 
-.flow-block__title {
+.flow-title {
     margin-bottom: 35px;
     font-size: 36px;
     font-weight: normal;
 }
 
 @media (min-width: $tabletView) {
-    .flow-block__title {
+    .flow-title {
         margin-bottom: 65px;
         font-size: 60px;
     }

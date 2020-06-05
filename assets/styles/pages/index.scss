@@ -3,7 +3,6 @@
 @import '../common/main.scss';
 
 /* Blocks */
-@import 'index/flow.scss'; // part of the page, not the block
 @import '../../blocks/first-screen/style.scss';
 @import '../../blocks/header/style.scss';
 @import '../../blocks/promo/style.scss';
@@ -11,5 +10,9 @@
 @import '../../blocks/nutrition-program/style.scss';
 @import '../../blocks/advantages/style.scss';
 @import '../../blocks/living-example/style.scss';
-@import '../../blocks/location/style.scss';
 @import '../../blocks/footer/style.scss';
+
+/* Unique */
+@import 'index/flow.scss'; // part of the page, not the block
+@import 'index/header.scss';
+@import 'index/location.scss';

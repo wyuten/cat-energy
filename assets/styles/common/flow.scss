@@ -1,11 +1,18 @@
 /* Flow block - part of the page, not the block */
 
-
-.flow__title-wrapper {
+.flow-title {
     display: flex;
     align-items: center;
     padding-top: 30px;
     padding-bottom: 30px;
+
+    h2 {
+        padding-left: $mobileIndent;
+        padding-right: 24px;
+        font-size: 24px;
+        font-weight: normal;
+        color: #111111;
+    }
 
     &:before,
     &:after {
@@ -21,21 +28,17 @@
     }
 }
 
-.flow-block__title {
-    flex-shrink: 0;
-    padding-left: $mobileIndent;
-    padding-right: 24px;
-    font-size: 24px;
-    font-weight: normal;
-    color: #111111;
-}
-
 
 @media (min-width: $tabletView) {
-    .flow__title-wrapper {
-        margin-bottom: 80px;
-        padding-top: 0;
-        padding-bottom: 0;
+    .flow-title {
+        padding-top: 65px;
+        padding-bottom: 60px;
+
+        h2 {
+            padding-left: 40px;
+            padding-right: 40px;
+            font-size: 36px;
+        }
 
         &:before,
         &:after {
@@ -46,16 +49,12 @@
             width: $tabletIndent;
         }
     }
-
-    .additionals__title {
-        padding-left: 40px;
-        padding-right: 40px;
-        font-size: 36px;
-    }
 }
 
 @media (min-width: $desktopView) {
-    .flow__title-wrapper {
+    .flow-title {
+        padding-bottom: 75px;
+
         &:before {
             width: calc(50% - #{$desktopView} / 2 - 40px); // subtract padding-left of title
         }

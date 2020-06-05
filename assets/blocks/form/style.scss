@@ -1,0 +1,209 @@
+/* Form */
+
+
+/* Main */
+
+.form__label {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #222222;
+}
+
+.form__label,
+.form__field {
+    font-size: 16px;
+}
+
+.form__icon-label {
+    position: relative;
+
+    svg {
+        position: absolute;
+        right: 15px;
+        width: 20px;
+        height: 20px;
+        fill: #222222;
+
+        &.email {
+            right: 20px;
+        }
+    }
+}
+    
+
+
+/* Field (textarea, input[type="text, email, password..."] */
+
+.form__field {
+    $fieldPadding: 15px;
+
+    flex-grow: 1;
+    width: 50%;
+    margin-left: 15px;
+    padding: $fieldPadding;
+    text-transform: uppercase;
+    border: 1px solid #e7e7e7;
+    outline: none;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    &::placeholder {
+        line-height: 1.5em;
+        color: #444444;
+    }
+
+    &:hover {
+        border-color: #cfcfcf;
+    }
+
+    &:focus {
+        padding: calc(#{$fieldPadding} - 1px);
+        border-width: 2px;
+        border-color: #444444;
+
+        ~ svg {
+            fill: #68b738;
+        }
+    }
+
+    &:not(:valid) {
+        padding: calc(#{$fieldPadding} - 1px);
+        border-width: 2px;
+        border-color: #ff8282;
+
+        ~ svg {
+            fill: #ff8282;
+        }
+    }
+
+    &--icon {
+        padding-right: 55px;
+
+        &:focus,
+        &:not(:valid) {
+            padding-right: 55px;
+        }
+    }
+}
+
+.form__textarea-field {
+    padding-right: 10px;
+
+    &:focus,
+    &:not(:valid) {
+        padding-right: 10px;
+    }
+}
+
+
+/* Radio */
+
+.form__radio-label {
+    cursor: pointer;
+
+    &:hover .form__radio-mark {
+        box-shadow: 0px 0px 0px 1px #bcbcbc;
+    }
+}
+
+.form__radio {
+    display: none;
+}
+
+.form__radio-mark {
+    width: 28px;
+    height: 28px;
+    margin-right: 15px;
+
+    background-color: #ffffff;
+    border: 8px solid #ffffff;
+    border-radius: 50%;
+    box-shadow: 0px 0px 0px 1px #cecece;
+}
+
+.form__radio:checked ~ .form__radio-mark {
+    background-color: #68b738;
+}
+
+
+/* Checkbox */
+
+.form__checkbox-label {
+    cursor: pointer;
+}
+
+.form__checkbox {
+    display: none;
+}
+
+.form__checkbox-mark {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+    background-color: #ffffff;
+    border: 1px solid #cfcfcf;
+}
+
+.form__checkbox:checked ~ .form__checkbox-mark {
+    &:before {
+        content: "";
+        position: absolute;
+        height: 9px;
+        width: 18px;
+        top: 5px;
+        left: 5px;
+        border-left: 2px solid #68b738;
+        border-bottom: 2px solid #68b738;
+        transform: rotate(-49deg) skewX(-8deg);
+    }
+}
+
+
+@media (min-width: $tabletView) {
+    /* Main */
+
+    .form__label,
+    .form__field {
+        font-size: 20px;
+    }
+
+
+    /* Field */
+
+    .form__field {
+        padding-left: 20px;
+
+        &:focus,
+        &:not(:valid) {
+            padding-left: 19px;
+        }
+    }
+
+
+    /* Radio */
+
+    .form__radio-mark {
+        width: 38px;
+        height: 38px;
+        border-width: 10px;
+    }
+
+
+    /* Checkbox */
+
+    .form__checkbox-mark {
+        width: 40px;
+        height: 40px;
+    }
+
+    .form__checkbox:checked ~ .form__checkbox-mark {        
+        &:before {
+            top: 10px;
+            left: 10px;
+        }
+    }
+}

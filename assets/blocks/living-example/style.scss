@@ -8,6 +8,8 @@
 }
 
 .living-example__text-info {
+    padding-left: $mobileIndent;
+    padding-right: $mobileIndent;
     margin-bottom: 45px;
 }
 
@@ -156,6 +158,8 @@
     }
     
     .living-example__text-info {
+        padding-left: $tabletIndent;
+        padding-right: $tabletIndent;
         margin-bottom: 80px;
     }
 
@@ -282,6 +286,7 @@
     .living-example__text-info {
         z-index: 1;
         width: 450px;
+        padding-left: $desktopIndent;
         padding-right: 0;
         margin-bottom: 0;
         box-sizing: content-box;

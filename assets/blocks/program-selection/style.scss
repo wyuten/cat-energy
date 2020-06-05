@@ -1,0 +1,290 @@
+/* Program selection */
+
+
+/* Main */
+
+.cat-info,
+.program-selection {
+    padding-left: $mobileIndent;
+    padding-right: $mobileIndent;
+}
+
+.contacts,
+.additions-list,
+.send-form,
+.comment-area {
+    margin-left: $mobileIndent;
+    margin-right: $mobileIndent;
+}
+
+.form__label {
+    margin-bottom: 15px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+
+/* Program */
+
+.cat-info {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ededed;
+}
+
+.program-selection {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ededed;
+}
+
+
+/* Owner contacts */
+
+.flow-title h2 {
+    white-space: pre-line;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Comment */
+
+.comment-area {
+    width: calc(100% - #{$mobileIndent} * 2);
+}
+
+
+/* Additions */
+
+.additions {
+    margin-bottom: 30px;
+}
+
+.additions-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.additions-list .fields-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+
+/* Send form */
+
+.send-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+.send-form__btn {
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.send-form__mark {
+    font-family: "Arial", sans-serif;
+    font-size: 14px;
+    color: #444444;
+}
+
+
+@media (min-width: $tabletView) {
+    /* Main */
+
+    .cat-info,
+    .program-selection,
+    .contacts,
+    .additions-list,
+    .send-form,
+    .comment-area {
+        margin-left: $tabletIndent;
+        margin-right: $tabletIndent;
+    }
+
+    .form__label {
+        padding: 0;
+
+        &--checkbox {
+            margin-bottom: 30px;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .form__field-label {
+        margin-bottom: 20px;
+    }
+
+
+    /* Program */
+
+    .cat-info {
+        padding-left: 0;
+        padding-right: 0;
+        border-bottom: 0;
+    }
+
+    .program-selection {
+        padding: 25px;
+        border: 1px solid #e6e6e6;
+    }
+
+
+    /* Owner contacts */
+
+    .flow-title h2 {
+        white-space: normal;
+    }
+
+
+    /* Comment */
+
+    .comment-area {
+        width: calc(100% - #{$tabletIndent} * 2);
+    }
+
+
+    /* Additions */
+
+    .additions {
+        margin-bottom: 55px;
+    }
+
+    .additions-list {
+        flex-direction: row;
+    }
+
+    .additions-list .fields-wrapper {
+        width: 50%;
+        margin-bottom: 0;
+    }
+
+
+    /* Send form */
+
+    .send-form {
+        flex-direction: row;
+        margin-bottom: 70px;
+    }
+
+    .send-form__btn {
+        width: 280px;
+        margin-right: 60px;
+        margin-bottom: 0;
+    }
+
+    .send-form__mark {
+        font-size: 16px;
+    }
+} 
+
+
+@media (min-width: $desktopView) {
+    /* Main */
+
+    .cat-info,
+    .program-selection {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .selection,
+    .contacts,
+    .additions-list,
+    .send-form,
+    .comment-area {
+        margin-left: $desktopIndent;
+        margin-right: $desktopIndent;
+    }
+
+
+    /* Program */
+
+    .selection {
+        display: flex;
+    }
+
+    .cat-info {
+        justify-content: space-between;
+        width: calc((#{$desktopView} - 80px) / 2);
+        padding: 0;
+        margin-right: 80px;
+    }
+
+    .program-selection {
+        flex-grow: 1;
+        margin-left: 0;
+    }
+
+
+    /* Owner contacts */
+
+    .contacts {
+        flex-direction: row;
+    }
+
+    .contacts .form__label {
+        margin-bottom: 0;
+        margin-right: 80px;
+
+        &:first-child {
+            width: calc((#{$desktopView} - 80px) / 2);
+        }
+
+        &:not(:first-child) {
+            flex-grow: 1;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+
+    /* Comment */
+
+    .comment-area {
+        width: calc(100% - #{$desktopIndent} * 2);
+    }
+
+
+    /* Additions */
+
+    .additions-list .fields-wrapper {
+        flex-grow: 1;
+        flex-direction: row;
+        width: auto;
+    }
+
+    .additions-list .form__label {
+        flex-grow: 1;
+        margin-bottom: 0;
+    }
+
+
+    /* Send form */
+
+    .send-form {
+        margin-bottom: 80px;
+    }
+}

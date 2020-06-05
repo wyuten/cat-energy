@@ -1,0 +1,22 @@
+/* Header */
+
+
+@media (min-width: $tabletView) {
+    .header {
+        margin-bottom: 0;
+    }
+}
+
+
+@media (min-width: $desktopView) {
+
+    .site-nav__item {
+        a {
+            color: #ffffff;
+        }
+
+        &--current a {
+            border-bottom-color: #ffffff;
+        }
+    }
+}

@@ -8,7 +8,9 @@ $mapHeight: 360px;
     align-items: center;
     padding-top: 30px;
     padding-bottom: 30px;
-    background-color: #ffffff;
+    padding-left: $mobileIndent;
+    padding-right: $mobileIndent;
+    background-color: #f2f2f2;
 }
 
 .address__title {
@@ -36,8 +38,7 @@ $mapHeight: 360px;
     $mapHeight: 400px;
 
     .address {
-        padding: 70px;
-        word-wrap: pre-wrap;
+        padding: 70px $tabletIndent;
     }
 
     .address__title {
@@ -80,6 +81,8 @@ $mapHeight: 360px;
         justify-content: flex-start;
         width: 570px;
         height: 200px;
+        padding: 65px 75px;
+        background-color: #ffffff;
     }
 
     .address__subtitle {

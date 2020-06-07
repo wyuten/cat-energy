@@ -8,7 +8,8 @@
 
 ## Описание
 
-![Превью](https://i.ibb.co/D7Xy95W/Annotation-2020-06-07-194251.png)
+![Превью](https://i.ibb.co/D7Xy95W/Annotation-2020-06-07-194251.png)  
+[**Полистать его**](https://oldvirginmary.github.io/cat-energy/build/index.html)
 
 ### Сайт
 Собирается вместе с графикой, стилями и прочим имуществом с помощью Gulp-скрипта в директорию **/build**.

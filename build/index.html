@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="assets/styles/normalize.css">
+    <!-- <link rel="stylesheet" href="assets/styles/normalize.min.css"> -->
+    <link rel="stylesheet" href="assets/styles/index.css">
+    <!-- <link rel="stylesheet" href="assets/styles/index.min.css"> -->
+
+    <title>Cat energy</title>
+</head>
+
+<body class="no-js">
+    <div class="first-screen">
+        <header class="header">
+            <div class="top-wrapper">
+                <a class="company-emblem"></a>
+                <a class="company-logo"></a>
+                <button 
+                    class="nav-toggle opened" 
+                    aria-label="Открыть меню">
+                    <span class="nav-toggle--desc">Открыть меню</span></button>
+            </div>
+            <ul class="site-nav opened">
+                <li class="site-nav__item site-nav__item--current"><a>Главная</a></li>
+                <li class="site-nav__item"><a href="catalog.html">Каталог продукции</a></li>
+                <li class="site-nav__item"><a href="program-selection.html">Подбор программы</a></li>
+            </ul>
+        </header>
+        <section class="promo">
+            <div class="text-wrapper">
+                <h1 class="promo__title">
+                    Функциональное <br>
+                    питание для котов
+                </h1>
+                <strong class="promo__subtitle">Занялся собой? Займись котом!</strong>
+            </div>
+            <picture class="promo__can">
+                <source 
+                    media="(min-width: 1220px)" 
+                    srcset="assets/images/promo-can--desktop.png" 
+                    alt="Ведёрко с курицей">
+                <source 
+                    media="(min-width: 768px)" 
+                    srcset="assets/images/promo-can--tablet.jpg" 
+                    alt="Ведёрко с курицей">
+                <img class="lazyload" src="assets/images/promo-can--mobile.png" alt="Ведёрко с курицей">
+            </picture>
+            <a class="promo__link btn btn--green" href="#nutrition-programs">Подобрать программу</a>
+        </section>
+    </div>
+    
+    <main>
+        <section id="nutrition-programs" class="nutrition-programs flow-block">
+            <h2 class="visually-hidden">Программы питания</h2>
+            <ul class="programs-list">
+                <li class="nutrition-program nutrition-program--lose">
+                    <div class="nutrition-program__text">
+                        <h3 class="nutrition-program__title">Похудение</h3>
+                        <p class="nutrition-program__subtitle">
+                            Ваш кот весит больше собаки и почти утратил способность лазить по деревьям?
+                            Пора на диету! Cat Energy Slim поможет
+                            вашему питомцу сбросить лишний вес.
+                        </p>
+                        <a href="catalog.html" class="nutrition-program__link">Каталог slim</a>
+                    </div>
+                </li>
+                <li class="nutrition-program nutrition-program--gain">
+                    <div class="nutrition-program__text">
+                        <h3 class="nutrition-program__title">Набор массы</h3>
+                        <p class="nutrition-program__subtitle">
+                            Заработать авторитет среди дворовых котов и даже собак?
+                            Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
+                        </p>
+                        <a href="catalog.html" class="nutrition-program__link">Каталог pro</a>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="advantages flow-block">
+            <h2 class="advantages__title flow-title">Как это работает</h2>
+            <ul class="advantages__list">
+                <li class="advantages__item advantages__item--eco">
+                    <p>Функциональное питание содержит только полезные питательные вещества.</p>
+                </li>
+                <li class="advantages__item advantages__item--easy">
+                    <p>Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
+                </li>
+                <li class="advantages__item advantages__item--functional">
+                    <p>Замените один-два приема обычной еды на наше функциональное питание.</p>
+                </li>
+                <li class="advantages__item advantages__item--quickly">
+                    <p>Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
+                </li>
+            </ul>
+        </section>
+        <section class="living-example">
+            <div class="living-example__text-info">
+                <h2 class="living-example__title flow-title">Живой пример</h2>
+                <p class="living-example__subtitle">
+                    Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
+                    Отличный результат без изнуряющих тренировок!
+                    При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
+                </p>
+                <div class="living-example__result">
+                    <div class="cat-result">
+                        <div class="weight-result">
+                            <span class="weight-result--amount">5 кг</span>
+                            <span class="weight-result--desc">снижение веса</span>
+                        </div>
+                        <div class="time-result">
+                            <span class="time-result--amount">60 дней</span>
+                            <span class="time-result--desc">затрачено времени</span>
+                        </div>
+                    </div>
+                    <p class="man-result">
+                        Затраты на питание: 15 000 руб.
+                    </p>
+                </div>
+            </div>
+            <div class="cat-example cat-example--before">
+                <div class="cat-example__picture-block">
+                    <picture class="cat-example__picture cat-example__picture--before">
+                        <source 
+                            media="(min-width: 768px)" 
+                            data-srcset="assets/images/cat-tablet--before.png"
+                            alt="Таким был кот">
+                        <img 
+                            class="lazyload" 
+                            data-src="assets/images/cat-mobile--before.png" 
+                            alt="Таким был кот">
+                    </picture>
+                    <picture class="cat-example__picture cat-example__picture--after">
+                        <source 
+                            media="(min-width: 768px)" 
+                            data-srcset="assets/images/cat-tablet--after.png"
+                            alt="Таким станет кот">
+                        <img 
+                            class="lazyload" 
+                            data-src="assets/images/cat-mobile--after.png" 
+                            alt="Таким станет кот">
+                    </picture>
+                </div>
+                <div class="cat-example__control">
+                    <button class="cat-example__btn cat-example__btn--before">Было</button>
+                    <input class="cat-example__control-range" type="range" min="0" max="1000">
+                    <span class="cat-example__control-display cat-example__control-display--before"></span>
+                    <button class="cat-example__btn cat-example__btn--after">Стало</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <section class="location">
+            <div class="address">
+                <h2 class="address__title">Приглашаем<br>к сотрудничеству<br>дилеров!</h2>
+                <p class="address__subtitle">
+                    ул. Большая<br>
+                    Конюшенная, д. 19/8<br>
+                    <span class="address__city">Санкт-Петербург</span>
+                </p>
+            </div>
+            <iframe class="map lazyload" title="Ищите нас по улице Большая Конюшенная, дом 19/8 в Санкт-Петербурге"
+                data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6002242964482!2d30.31989848486501!3d59.938775599618424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2sBolshaya%20Konyushennaya%20St%2C%2019%2F8%2C%20Sankt-Peterburg%2C%20191186!5e0!3m2!1sen!2sru!4v1586287546282!5m2!1sen!2sru&zoom=15"
+                frameborder="0" style="border:0;" aria-hidden="false"
+                tabindex="0"></iframe>
+        </section>
+        <section class="footer-nav">
+            <div class="footer-logo">
+                <a>
+                    <svg class="footer-logo__img" aria-labelledby="heading">
+                        <title>Cat energy</title>
+                        <use xlink:href="assets/svg/sprite.svg#footer-logo" />
+                    </svg>
+                </a>
+            </div>
+            <div class="socials">
+                <a class="socials-link" href="https://vk.com">
+                    <svg class="socials-link__img socials-link__img--vk" aria-labelledby="heading">
+                        <title>ВК</title>
+                        <use xlink:href="assets/svg/sprite.svg#vk" />
+                    </svg>
+                </a>
+                <a class="socials-link" href="https://instagram.com">
+                    <svg class="socials-link__img socials-link__img--instagram" aria-labelledby="heading">
+                        <title>Инстаграм</title>
+                        <use xlink:href="assets/svg/sprite.svg#instagram"></use>
+                    </svg>
+                </a>
+                <a class="socials-link" href="https://facebook.com">
+                    <svg class="socials-link__img socials-link__img--facebook" aria-labelledby="heading">
+                        <title>Фэйсбук</title>
+                        <use xlink:href="assets/svg/sprite.svg#facebook"></use>
+                    </svg>
+                </a>
+            </div>
+            <div class="copyright">
+                <a class="copyright-logo" href="https://htmlacademy.ru">HTML Academy</a>
+                <a class="copyright-emblem" href="https://htmlacademy.ru">
+                    <svg aria-labelledby="heading">
+                        <title>HTML Academy</title>
+                        <use xlink:href="assets/svg/sprite.svg#copyright-emblem"></use>
+                    </svg>
+                </a>
+            </div>
+        </section>
+    </footer>
+
+    <script src="assets/scripts/lazysizes.min.js"></script>
+    <script src="assets/scripts/no.js"></script>
+    <!-- <script src="assets/scripts/no.min.js"></script> -->
+    <script src="assets/scripts/header/script.js"></script>
+    <!-- <script src="assets/scripts/header/script.min.js"></script> -->
+    <!-- <script src="assets/scripts/svg4everybody.min.js"></script> --> <!-- For IE 11 -->
+    <script src="assets/scripts/living-example/script.js"></script>
+    <!-- <script src="assets/scripts/living-example/script.min.js"></script> -->
+</body>
+</html>

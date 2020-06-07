@@ -39,66 +39,6 @@ body {
     height: 1px !important;
     width: 1px !important;
     overflow: hidden;
-}
-
-
-/* Page title */
-
-.page-title {
-    margin-bottom: 0;
-    padding-top: 25px;
-    padding-bottom: 37px;
-    padding-left: $mobileIndent;
-    padding-right: $mobileIndent;
-    font-size: 36px;
-    font-weight: normal;
-    color: #111111;
-    
-    &--single {
-        border-bottom: 1px solid #ededed;
-    }
-}
-
-.page-subtitle {
-    width: 260px;
-    margin-bottom: 40px;
-    margin-left: $mobileIndent;
-    font-size: 14px;
-    text-transform: uppercase;
-    color: #111111;
-}
-
-@media (min-width: $tabletView) {
-    .page-title {
-        padding-top: 0;
-        padding-bottom: 0;
-        padding-left: $tabletIndent;
-        padding-right: $tabletIndent;
-        margin-bottom: 60px;
-        font-size: 60px;
-        border-bottom: none;
-    }
-
-    .page-subtitle {
-        width: 400px;
-        margin-bottom: 70px;
-        margin-left: $tabletIndent;
-        padding-left: 40px;
-        font-size: 20px;
-    }
-} 
-
-@media (min-width: $desktopView) {
-    .page-title {
-        padding-left: $desktopIndent;
-        padding-right: $desktopIndent;
-    }
-
-    .page-subtitle {
-        width: 360px;
-        margin-left: $desktopIndent;
-        padding-left: 0;
-    }
 } 
 
 

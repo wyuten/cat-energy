@@ -31,19 +31,19 @@ gulp.task('documents', () => {
 		.pipe(gulp.dest('build/'));
 });
 
-gulp.task('immutable-styles-prod', () => {
+gulp.task('prod-immutable-styles', () => {
 	return gulp.src('assets/styles/immutable/*.css')
 		.pipe(cssMinify())
 		.pipe(rename({suffix: ".min"}))
 		.pipe(gulp.dest('build/assets/styles/'));
 });
 
-gulp.task('immutable-styles-dev', () => {
+gulp.task('dev-immutable-styles', () => {
 	return gulp.src('assets/styles/immutable/*.css')
 		.pipe(gulp.dest('build/assets/styles/'));
 });
 
-gulp.task('styles-prod', () => {
+gulp.task('prod-styles', () => {
 	return gulp.src('assets/styles/pages/*.scss')
 		.pipe(plumber())
 		.pipe(sass())
@@ -58,24 +58,24 @@ gulp.task('styles-prod', () => {
 		.pipe(gulp.dest('build/assets/styles'));
 });
 
-gulp.task('styles-dev', () => {
+gulp.task('dev-styles', () => {
 	return gulp.src('assets/styles/pages/*.scss')
 		.pipe(sass())
 		.pipe(flatten({includeParents: 0}))
 		.pipe(gulp.dest('build/assets/styles'));
 });
 
-gulp.task('images-prod', () => {
+gulp.task('prod-images', () => {
 	return gulp.src('assets/blocks/**/images/*.*')
 		.pipe(imagemin([
 			imagemin.mozjpeg({quality: 80, progressive: true}),
-			imagemin.optipng({progressive: true})
+			imagemin.optipng()
 		]))
 		.pipe(flatten({includeParents: 0}))
 		.pipe(gulp.dest('build/assets/images/'));
 });
 
-gulp.task('images-dev', () => {
+gulp.task('dev-images', () => {
 	return gulp.src('assets/blocks/**/images/*.*')
 		.pipe(flatten({includeParents: 0}))
 		.pipe(gulp.dest('build/assets/images/'));
@@ -90,7 +90,7 @@ gulp.task('sprite', () => {
 	.pipe(gulp.dest('build/assets/svg'));
 });
 
-gulp.task('scripts-prod', () => {
+gulp.task('prod-scripts', () => {
 	return gulp.src([
 		'assets/blocks/**/*.js', 
 		'!assets/blocks/**/*.min.js',
@@ -108,7 +108,7 @@ gulp.task('scripts-prod', () => {
 		.pipe(gulp.dest('build/assets/scripts'));
 });
 
-gulp.task('scripts-dev', () => {
+gulp.task('dev-scripts', () => {
 	return gulp.src([
 		'assets/blocks/**/*.js', 
 		'!assets/blocks/**/*.min.js',
@@ -141,12 +141,12 @@ gulp.task('reload', (done) => {
 gulp.task('dev-build', (done) => {
 	run('build-clean', [
 		'documents', 
-		'immutable-styles-dev',
-		'styles-dev', 
-		'images-dev', 
+		'dev-immutable-styles',
+		'dev-styles',
+		'dev-images',
 		'sprite', 
 		'completed-scripts', 
-		'scripts-dev', 
+		'dev-scripts',
 		'fonts'
 	], done);
 });
@@ -164,13 +164,13 @@ gulp.task('dev-serve', () => {
 		.on('all', gulp.series('documents', 'reload'));
 	
 	gulp.watch('assets/**/*.scss')
-		.on('all', gulp.series('styles-dev', 'reload'));
+		.on('all', gulp.series('dev-styles', 'reload'));
 		
 	gulp.watch('assets/**/*.js')
-		.on('all', gulp.series('completed-scripts', 'scripts-dev', 'reload'));
+		.on('all', gulp.series('completed-scripts', 'dev-scripts', 'reload'));
 
 	gulp.watch('assets/**/images/*.*')
-		.on('all', gulp.series('images-dev', 'reload'));
+		.on('all', gulp.series('dev-images', 'reload'));
 		
 	gulp.watch('assets/**/images/*.svg')
 		.on('all', gulp.series('sprite', 'reload'));
@@ -179,12 +179,12 @@ gulp.task('dev-serve', () => {
 gulp.task('prod-build', (done) => {
 	run('build-clean', [
 		'documents', 
-		'immutable-styles-prod',
-		'styles-prod', 
-		'images-prod',
+		'prod-immutable-styles',
+		'prod-styles',
+		'prod-images',
 		'sprite', 
 		'completed-scripts', 
-		'scripts-prod',  
+		'prod-scripts',
 		'fonts',
 	],done);
 });
@@ -202,13 +202,13 @@ gulp.task('prod-serve', () => {
 		.on('all', gulp.series('documents', 'reload'));
 	
 	gulp.watch('assets/**/*.scss')
-		.on('all', gulp.series('styles-prod', 'reload'));
+		.on('all', gulp.series('prod-styles', 'reload'));
 		
 	gulp.watch('assets/**/*.js')
-		.on('all', gulp.series('completed-scripts', 'scripts-prod', 'reload'));
+		.on('all', gulp.series('completed-scripts', 'prod-scripts', 'reload'));
 
 	gulp.watch('assets/**/images/*.*')
-		.on('all', gulp.series('images-prod', 'reload'));
+		.on('all', gulp.series('prod-images', 'reload'));
 		
 	gulp.watch('assets/**/images/*.svg')
 		.on('all', gulp.series('sprite', 'reload'));
